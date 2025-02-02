@@ -1,0 +1,4 @@
+Application.HomePage.RadioButtonHeader=xpath=//legend[contains(text(),'Radio Button Example')]
+Application.HomePage.RadioButton1=xpath=//button[contains(text(),'Radio1')]
+Application.HomePage.RadioButton2=xpath=//button[contains(text(),'Radio2')]
+Application.HomePage.RadioButton3=xpath=//button[contains(text(),'Radio3')]
