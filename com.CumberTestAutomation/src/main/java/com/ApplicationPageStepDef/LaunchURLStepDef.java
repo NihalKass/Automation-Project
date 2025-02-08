@@ -1,21 +1,26 @@
 package com.ApplicationPageStepDef;
 
 
-import com.componets.Utilities;
+import org.openqa.selenium.WebDriver;
+
+import com.components.Utilities;
+import com.components.hooks;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
-public class LaunchURLStepDef{
+public class LaunchURLStepDef {
+	
+	 WebDriver driver;
 
-	Utilities util = new Utilities();
+	hooks hook = new hooks();
+	Utilities util = new Utilities(driver);
 	
 	
 		@Given("Launch the Browser")
 		public void LaunchBrowser() {
-			//util.setupLaunch();
-		    //throw new io.cucumber.java.PendingException();
+			hook.Launchsetup();
 		}
 
 		@Then("Validate the launched Url")
@@ -26,7 +31,7 @@ public class LaunchURLStepDef{
 		
 		@And("Close the Browser")
 		public void closeBrowser() {
-			//launchpage.closeBrowser();
+			hook.closeBrowser();
 		    //throw new io.cucumber.java.PendingException();
 		}
 		

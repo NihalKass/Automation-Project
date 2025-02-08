@@ -4,13 +4,19 @@ import java.io.IOException;
 import java.util.Properties;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import com.componets.Utilities;
 
-public class homePage extends Utilities{
+import com.components.Utilities;
+import com.components.hooks;
+
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+
+public class homePage{
+	WebDriver driver;
 			
-	Utilities util = new Utilities();
+	Utilities util = new Utilities(driver);
 
 	//WebDriver driver;
 	//xpath details
@@ -26,7 +32,7 @@ public class homePage extends Utilities{
 	@FindBy(xpath = "Application.HomePage.RadioButton3")
 	private WebElement RadioButton3;
 	
-	public void verifyElemets() throws InterruptedException {
+	public void verifyElements() throws InterruptedException {
 		String radioBtnHeaderValue = RadioButtonHeader.getText();
 		Assert.assertEquals(radioBtnHeaderValue, "Radio Button Example");
 		
@@ -39,10 +45,11 @@ public class homePage extends Utilities{
 		
 	}
 	
-	public void click(String button) throws IOException {
+	public void Elementsclick(String button) throws IOException {
 		Properties loadedData = util.readPropertiesFile("xPath");
 		String xpathData = loadedData.getProperty(button);
 		System.out.print(xpathData);
 		driver.findElement(By.xpath(xpathData)).click();
 	}
+	
 }

@@ -1,14 +1,18 @@
 package com.ApplicationPages;
 
 import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import com.componets.Utilities;
+import com.components.Utilities;
 
-public class LoginPage extends Utilities {
+public class LoginPage {
 
-	Utilities util = new Utilities();
+	WebDriver driver;
+    
+	Utilities util = new Utilities(driver);
 
 	@FindBy(xpath = "Application.LoginPage.LoginButton")
 	private WebElement LoginButton;

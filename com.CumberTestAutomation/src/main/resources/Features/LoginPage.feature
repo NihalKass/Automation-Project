@@ -1,14 +1,11 @@
+@Regression @LoginPage
+Feature: Login Page 
 
-Feature: Login Page
-
-
-  @LoginPage
+  @LoginPage_User
   Scenario Outline: Login Page
-  	#Given Launch the Browser
-    #Then Validate the launched Url
-    #And Click on Login button
-    #And verify elements under homepage
-    And Click on button "RadioButton1" 
+  	Given Launch the Browser
+    Then Validate the launched Url
+    And Click on Login button 
     Then Enter the "<Username>" and "<Password>"
     And Close the Browser
 

@@ -1,8 +1,8 @@
-#@Regression 
-#Feature: Launch the Application
-#
-#@LaunchURL
-#Scenario:
-    #Given Launch the Application using URL
-    #Then Validate URL is launched
+@Regression 
+Feature: Launch the Application
+
+@LaunchSetup
+Scenario: Launching setup for the application and browser
+    Given Launch the Browser
+    Then Validate the launched Url
 

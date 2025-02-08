@@ -1,4 +1,4 @@
-package com.componets;
+package com.components;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -7,15 +7,20 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
-
 public class Utilities {
 
-	public static WebDriver driver = new ChromeDriver();
-	
+ WebDriver driver;
+ 
+//Constructor to initialize the WebDriver
+ public Utilities(WebDriver driver) {
+	 this.driver = driver;
+ }
+
 	public void validateUrl() {
+		//WebDriver driver = null;
 		//Assert.assertTrue(
 			//	driver.getCurrentUrl().equalsIgnoreCase("https://rahulshettyacademy.com/AutomationPractice/"));
+		
 		String CurrnetUrl = driver.getCurrentUrl();
 		System.out.println("Currnet Url: "+CurrnetUrl);
 		String PageHeader = driver.findElement(By.xpath("//h1[(contains(text(),'Practice Page'))]")).getText();
@@ -25,7 +30,7 @@ public class Utilities {
 		}
 	}
 
-	public static  Properties readPropertiesFile(String fileName) throws IOException {
+	public Properties readPropertiesFile(String fileName) throws IOException {
 		String filePath = System.getProperty("user.dir") + "\\src\\main\\resources\\CommonPath\\" + fileName + ".properties";
 		FileReader reader = new FileReader(filePath);
 		Properties prop = new Properties();
@@ -33,5 +38,6 @@ public class Utilities {
 		
 		return prop;
 	}
-
 }
+
+
