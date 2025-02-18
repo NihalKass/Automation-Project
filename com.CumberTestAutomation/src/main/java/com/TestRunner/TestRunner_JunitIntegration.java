@@ -10,7 +10,7 @@ import io.cucumber.junit.Cucumber;
 		  glue = {"src/main/java/com.ApplicationPageStepDef"}, //package name for step def
 		  plugin = {"pretty", 												//report generator
 				  "html:target/cucumber-Report.html","json:target/report.json"}, //two different format report
-		  tags = "Regression"
+		  tags = "@Test"
   )
 
 public class TestRunner_JunitIntegration {

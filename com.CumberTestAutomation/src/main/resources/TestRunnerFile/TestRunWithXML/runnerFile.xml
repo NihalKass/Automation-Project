@@ -2,8 +2,7 @@
 <suite name="Cucumber Suite">
     <test name="Cucumber Tests">
         <classes>
-            <class name="com.TestRunner.TestRunner_testNGIntegreation"/>
-            			 
+            <class name="com.TestRunner.TestRunner_testNGIntegreation"/>		 
         </classes>
     </test>
 </suite>
