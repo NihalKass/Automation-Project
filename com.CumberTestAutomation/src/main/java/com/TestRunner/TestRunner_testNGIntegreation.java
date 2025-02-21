@@ -12,7 +12,7 @@ import io.cucumber.testng.CucumberOptions;
 				  "html:target/cucumber-Report.html","json:target/report.json"}, //two different format report
 				  //plugin = {"pretty", 												//report generator
 					//	  "html:target/cucumber-Report.html","json:target/report.json"}
-		  tags = "@Test"									//tags used in feature file
+		  tags = "@HomePage_ElementsVal"									//tags used in feature file
 		)
 
 public class TestRunner_testNGIntegreation extends AbstractTestNGCucumberTests{

@@ -5,12 +5,15 @@ import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 
 import com.ApplicationPages.LoginPage;
+import com.components.Utilities;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
 public class LoginPageStepDef {
-	WebDriver driver;
+	
+	Utilities utils = new Utilities();
+	WebDriver driver = utils.driver;
 
 	LoginPage loginPage = new LoginPage();
 	

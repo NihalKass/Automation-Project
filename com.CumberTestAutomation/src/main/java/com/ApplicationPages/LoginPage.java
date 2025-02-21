@@ -6,13 +6,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.components.Hooks;
 import com.components.Utilities;
 
 public class LoginPage {
-
-	WebDriver driver;
     
-	Utilities util = new Utilities(driver);
+	Utilities util = new Utilities();
 
 	@FindBy(xpath = "Application.LoginPage.LoginButton")
 	private WebElement LoginButton;

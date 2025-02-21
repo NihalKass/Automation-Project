@@ -7,20 +7,39 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Utilities extends hooks{
+public class Utilities{
 
- WebDriver driver;
- 
-//Constructor to initialize the WebDriver
- public Utilities(WebDriver driver) {
-	 this.driver = driver;
- }
+	public static WebDriver driver;
+	
+	//@Before
+    public void Launchsetup() {
+    	 try {
+    	        // Add logging to check the execution flow
+    	        System.out.println("Initializing setup...");
+    	        // Initialize WebDriver (example for ChromeDriver)
+    	        driver = new ChromeDriver();
+    	    	String url = "https://rahulshettyacademy.com/AutomationPractice/";
+    	        System.setProperty("webdriver.chrome.driver", "C:\\Users\\nihal\\eclipse-workspace\\Driver\\chromedriver.exe");
+    	        driver.manage().deleteAllCookies();
+    	        driver.manage().window().maximize();
+    	        driver.get(url);
+    	        
+    	  } catch (Exception e) {
+    	        e.printStackTrace();  // Print exception to identify the issue
+    	    }
+       
+        // Any additional setup steps like maximizing the window, etc.
+    }
+    
+    //@After
+    public void closeBrowser() throws InterruptedException {
+    	System.out.println("Closing the browser");
+        	Thread.sleep(2000);
+            driver.close();
+        
+    }
 
 	public void validateUrl() {
-		//WebDriver driver = null;
-		//Assert.assertTrue(
-			//	driver.getCurrentUrl().equalsIgnoreCase("https://rahulshettyacademy.com/AutomationPractice/"));
-		
 		String CurrnetUrl = driver.getCurrentUrl();
 		System.out.println("Currnet Url: "+CurrnetUrl);
 		String PageHeader = driver.findElement(By.xpath("//h1[(contains(text(),'Practice Page'))]")).getText();
