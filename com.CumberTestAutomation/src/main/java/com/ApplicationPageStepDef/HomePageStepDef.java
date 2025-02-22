@@ -12,7 +12,7 @@ import io.cucumber.java.en.And;
 
 public class HomePageStepDef {
 	Utilities utils = new Utilities();
-	WebDriver driver = utils.driver;
+	//WebDriver driver = utils.driver;
 
 	HomePage homepage = new HomePage();
 	
