@@ -11,6 +11,7 @@
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
 			<version>6.10.4</version>
+
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
 		<dependency>
@@ -26,34 +27,49 @@
 			<version>4.27.0</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.4.0</version> <!-- Use an appropriate TestNG version -->
-    <scope>test</scope>
-</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.4.0</version> <!-- Use an appropriate TestNG version -->
+			<scope>test</scope>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-testng</artifactId>
-    <version>6.10.4</version> <!-- Use the version compatible with your Cucumber setup -->
-</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-testng</artifactId>
+			<version>6.10.4</version>
 
+
+			<!-- Use the version compatible with your
+			
+			Cucumber setup -->
+		</dependency>
+		<!--part of pipeline setup where doing setup for maven runner-->
 	</dependencies>
-	<build>
-	<pluginManagement>
-	<plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.5.2</version>
-        <configuration>
-          <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
-          </suiteXmlFiles>
-        </configuration>
-      </plugin>
-</plugins>
-</pluginManagement>
-</build>
+
+	<profiles>
+		<profile>
+			<id>WebApp</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-surefire-plugin</artifactId>
+							<version>3.5.2</version>
+							<configuration>
+								<suiteXmlFiles>
+									<suiteXmlFile>TestRunWithXML/runnerFile.xml</suiteXmlFile>
+									
+										<forkedProcessTimeoutInSeconds>300</forkedProcessTimeoutInSeconds>
+									<testFailureIgnore>true</testFailureIgnore> 
+									
+								</suiteXmlFiles>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
 </project>

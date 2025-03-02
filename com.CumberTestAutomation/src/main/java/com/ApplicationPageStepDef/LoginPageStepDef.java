@@ -17,7 +17,7 @@ public class LoginPageStepDef {
 
 	LoginPage loginPage = new LoginPage();
 	
-	@And("Click on Login button")
+	@And("Click on Home button")
 	//(Description = Clicking on Login Button )
 	public void clickOnLoginButton() throws IOException {
 		loginPage.Login();
