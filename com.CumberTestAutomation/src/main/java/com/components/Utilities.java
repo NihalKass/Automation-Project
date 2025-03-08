@@ -1,7 +1,9 @@
 package com.components;
 
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,11 +16,21 @@ public class Utilities{
 	//@Before
     public void Launchsetup() {
     	 try {
-    	        // Add logging to check the execution flow
+    	        //trying another way to invoke browser using passing all url and parameter from properties file
+    		 Properties prop = new Properties();
+    		 FileInputStream file = new FileInputStream(System.getProperty("user.dir")
+    				 +"\\src\\main\\resources\\GlobalData\\GlobalData.properties");
+    		 
+    		// String browserName = System.getProperty("browser")!=null? System.getProperty("browser"):prop.g
+    		 
+    		 
+    		 
+    		 
+    		 	// Add logging to check the execution flow
     	        System.out.println("Initializing setup...");
     	        // Initialize WebDriver (example for ChromeDriver)
     	        driver = new ChromeDriver();
-    	    	String url = "https://rahulshettyacademy.com/AutomationPractice/";
+    	    	String url = "https://rahulshettyacademy.com/AutomationPractice/";  
     	        System.setProperty("webdriver.chrome.driver", "C:\\Users\\nihal\\eclipse-workspace\\Driver\\chromedriver.exe");
     	        driver.manage().deleteAllCookies();
     	        driver.manage().window().maximize();
