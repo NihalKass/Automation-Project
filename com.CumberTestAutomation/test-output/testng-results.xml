@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="1" failed="9" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-02T14:28:05 IST" name="Default suite" finished-at="2025-03-02T14:28:21 IST" duration-ms="16242">
+  <suite started-at="2025-03-08T20:14:15 IST" name="Default suite" finished-at="2025-03-08T20:14:26 IST" duration-ms="11677">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TestRunner.TestRunner_testNGIntegreation@293a5bf6]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-03-02T14:28:05 IST" name="Default test" finished-at="2025-03-02T14:28:21 IST" duration-ms="16242">
+    <test started-at="2025-03-08T20:14:15 IST" name="Default test" finished-at="2025-03-08T20:14:26 IST" duration-ms="11677">
       <class name="com.TestRunner.TestRunner_testNGIntegreation">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.TestRunner.TestRunner_testNGIntegreation@293a5bf6]" started-at="2025-03-02T14:28:05 IST" name="setUpClass" finished-at="2025-03-02T14:28:05 IST" duration-ms="683" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.TestRunner.TestRunner_testNGIntegreation@293a5bf6]" started-at="2025-03-08T20:14:15 IST" name="setUpClass" finished-at="2025-03-08T20:14:16 IST" duration-ms="783" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TestRunner.TestRunner_testNGIntegreation@293a5bf6]" started-at="2025-03-02T14:28:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-02T14:28:21 IST" duration-ms="15291" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TestRunner.TestRunner_testNGIntegreation@293a5bf6]" started-at="2025-03-08T20:14:16 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-08T20:14:26 IST" duration-ms="9977" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Home Page validations"]]>
+                <![CDATA["Home Page Radio button validation"]]>
               </value>
             </param>
             <param index="1">
@@ -30,7 +30,251 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.TestRunner.TestRunner_testNGIntegreation@293a5bf6]" started-at="2025-03-02T14:28:21 IST" name="tearDownClass" finished-at="2025-03-02T14:28:21 IST" duration-ms="201" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TestRunner.TestRunner_testNGIntegreation@293a5bf6]" started-at="2025-03-08T20:14:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-08T20:14:26 IST" duration-ms="79" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Home Page textbox validation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Home Page elements validations]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.getText()" because "this.textFieldHeader" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.getText()" because "this.textFieldHeader" is null
+at com.PracticeApplicationPages.HomePage.textBoxNameValWithInputData(HomePage.java:43)
+at com.PracticeApplicationPageStepDef.HomePageStepDef.validate_textbox_field_and_enter(HomePageStepDef.java:30)
+at ✽.Validate textbox field "Suggession Class Example" and Enter "testdata"(file:///C:/Users/nihal/WorkSpace_AutomationPracticeFinal/Automation-Project/com.CumberTestAutomation/src/main/resources/Features/PracticeApplicationFeatures/HomePage.feature:14)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TestRunner.TestRunner_testNGIntegreation@293a5bf6]" started-at="2025-03-08T20:14:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-08T20:14:26 IST" duration-ms="93" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Home Page dropdown and checkbox validations"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Home Page elements validations]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.java.PendingException">
+            <message>
+              <![CDATA[TODO: implement me]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.java.PendingException: TODO: implement me
+at com.PracticeApplicationPageStepDef.HomePageStepDef.validate_dropdown_field_and_select(HomePageStepDef.java:35)
+at ✽.Validate dropdown field "Values" and select "value2"(file:///C:/Users/nihal/WorkSpace_AutomationPracticeFinal/Automation-Project/com.CumberTestAutomation/src/main/resources/Features/PracticeApplicationFeatures/HomePage.feature:24)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.java.PendingException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TestRunner.TestRunner_testNGIntegreation@293a5bf6]" started-at="2025-03-08T20:14:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-08T20:14:26 IST" duration-ms="35" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Home Page switch windows validation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Home Page elements validations]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.java.PendingException">
+            <message>
+              <![CDATA[TODO: implement me]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.java.PendingException: TODO: implement me
+at com.PracticeApplicationPageStepDef.HomePageStepDef.click_on_to_switch_window(HomePageStepDef.java:45)
+at ✽.Click on "Open Window" to switch window(file:///C:/Users/nihal/WorkSpace_AutomationPracticeFinal/Automation-Project/com.CumberTestAutomation/src/main/resources/Features/PracticeApplicationFeatures/HomePage.feature:31)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.java.PendingException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TestRunner.TestRunner_testNGIntegreation@293a5bf6]" started-at="2025-03-08T20:14:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-08T20:14:26 IST" duration-ms="37" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Home Page switch tab validation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Home Page elements validations]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.java.PendingException">
+            <message>
+              <![CDATA[TODO: implement me]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.java.PendingException: TODO: implement me
+at com.PracticeApplicationPageStepDef.HomePageStepDef.click_on_to_move_to_other_tab(HomePageStepDef.java:55)
+at ✽.Click on "Open Tab" to move to other tab(file:///C:/Users/nihal/WorkSpace_AutomationPracticeFinal/Automation-Project/com.CumberTestAutomation/src/main/resources/Features/PracticeApplicationFeatures/HomePage.feature:38)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.java.PendingException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TestRunner.TestRunner_testNGIntegreation@293a5bf6]" started-at="2025-03-08T20:14:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-08T20:14:26 IST" duration-ms="37" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Home Page Alert Message validation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Home Page elements validations]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.java.PendingException">
+            <message>
+              <![CDATA[TODO: implement me]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.java.PendingException: TODO: implement me
+at com.PracticeApplicationPageStepDef.HomePageStepDef.click_on_button_to_validate(HomePageStepDef.java:65)
+at ✽.Click on "Alert" button to validate "alertMessage"(file:///C:/Users/nihal/WorkSpace_AutomationPracticeFinal/Automation-Project/com.CumberTestAutomation/src/main/resources/Features/PracticeApplicationFeatures/HomePage.feature:45)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.java.PendingException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TestRunner.TestRunner_testNGIntegreation@293a5bf6]" started-at="2025-03-08T20:14:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-08T20:14:26 IST" duration-ms="37" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Home Page table data and store data in excel"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Home Page elements validations]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.java.PendingException">
+            <message>
+              <![CDATA[TODO: implement me]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.java.PendingException: TODO: implement me
+at com.PracticeApplicationPageStepDef.HomePageStepDef.validate_all_elements_in_the_table1(HomePageStepDef.java:70)
+at ✽.Validate All elements in the table1(file:///C:/Users/nihal/WorkSpace_AutomationPracticeFinal/Automation-Project/com.CumberTestAutomation/src/main/resources/Features/PracticeApplicationFeatures/HomePage.feature:51)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.java.PendingException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TestRunner.TestRunner_testNGIntegreation@293a5bf6]" started-at="2025-03-08T20:14:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-08T20:14:26 IST" duration-ms="46" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Home Page table2 and sum validation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Home Page elements validations]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.java.PendingException">
+            <message>
+              <![CDATA[TODO: implement me]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.java.PendingException: TODO: implement me
+at com.PracticeApplicationPageStepDef.HomePageStepDef.validate_table2_and_verify_sum_amount_matched_with_total(HomePageStepDef.java:80)
+at ✽.Validate table2 and verify sum amount matched with total(file:///C:/Users/nihal/WorkSpace_AutomationPracticeFinal/Automation-Project/com.CumberTestAutomation/src/main/resources/Features/PracticeApplicationFeatures/HomePage.feature:58)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.java.PendingException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TestRunner.TestRunner_testNGIntegreation@293a5bf6]" started-at="2025-03-08T20:14:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-08T20:14:26 IST" duration-ms="48" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Home Page values on mouse hover validation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Home Page elements validations]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.java.PendingException">
+            <message>
+              <![CDATA[TODO: implement me]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.java.PendingException: TODO: implement me
+at com.PracticeApplicationPageStepDef.HomePageStepDef.validate_when_mouse_hover_on(HomePageStepDef.java:85)
+at ✽.Validate "values" when mouse hover on "Mouse Hover"(file:///C:/Users/nihal/WorkSpace_AutomationPracticeFinal/Automation-Project/com.CumberTestAutomation/src/main/resources/Features/PracticeApplicationFeatures/HomePage.feature:64)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.java.PendingException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.TestRunner.TestRunner_testNGIntegreation@293a5bf6]" started-at="2025-03-08T20:14:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-03-08T20:14:26 IST" duration-ms="46" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Home Page Hyperlink redirect to iFrame validation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Home Page elements validations]"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="io.cucumber.java.PendingException">
+            <message>
+              <![CDATA[TODO: implement me]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[io.cucumber.java.PendingException: TODO: implement me
+at com.PracticeApplicationPageStepDef.HomePageStepDef.validate_on_i_frame(HomePageStepDef.java:90)
+at ✽.Validate "Hyperlink" on iFrame(file:///C:/Users/nihal/WorkSpace_AutomationPracticeFinal/Automation-Project/com.CumberTestAutomation/src/main/resources/Features/PracticeApplicationFeatures/HomePage.feature:70)
+]]>
+            </full-stacktrace>
+          </exception> <!-- io.cucumber.java.PendingException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.TestRunner.TestRunner_testNGIntegreation@293a5bf6]" started-at="2025-03-08T20:14:26 IST" name="tearDownClass" finished-at="2025-03-08T20:14:26 IST" duration-ms="251" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

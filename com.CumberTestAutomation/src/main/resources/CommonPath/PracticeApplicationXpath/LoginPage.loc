@@ -1,0 +1,1 @@
+Application.LoginPage.LoginButton=xpath=//button[contains(text(),'Login')]

@@ -1,0 +1,9 @@
+#############LoginPage xpath######################
+LoginButton=//button[contains(text(),'Login')]
+
+#############HomePage Xpath######################
+HomeButton=//button[contains(text(),'Login')]
+RadioButton1=//input[@value='radio1']
+textBoxFieldName=
+Application.HomePage.RadioButton2=//*[@id="radio-btn-example"]/fieldset/label[2]/input
+Application.HomePage.RadioButton3=//*[@id="radio-btn-example"]/fieldset/label[3]/input
